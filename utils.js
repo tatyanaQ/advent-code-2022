@@ -1,11 +1,11 @@
 const fs = require("fs");
 
-function readFile(fileName) {
+function readFile(fileName, separator = "\n") {
   const inputFile = fs.readFileSync(`./${fileName}`, {
     encoding: "utf-8",
   });
 
-  return inputFile.split("\n");
+  return inputFile.split(separator);
 }
 
 function arraySum(array) {
